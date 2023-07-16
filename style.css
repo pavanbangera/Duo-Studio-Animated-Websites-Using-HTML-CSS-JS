@@ -48,6 +48,7 @@ html,body{
 .nav>ul>li{
    list-style: none;
    padding: 2px 5px;
+   margin-right: 10px;
    color: #ffffff;
    font-size: 14px;
    font-weight: 500;
