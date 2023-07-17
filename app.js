@@ -104,13 +104,16 @@ tl1.to(".page1 h2", ({
     x: "100"
 }), "anim")
 
-tl1.to(".page1 video", ({
-    width: "95%"
+tl1.to(".page1 .video", ({
+    scale: 1
 }), "anim")
 
 tl2.to(".main", ({
     backgroundColor: "#EFEFF2",
     color: " #0f0d0d"
+}))
+tl2.to(".page2", ({
+    opacity: 1
 }))
 tl3.to(".page2 span", ({
     width: "100%"
