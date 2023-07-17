@@ -52,46 +52,46 @@ let tl1 = gsap.timeline({
 })
 let tl2 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page1 h1",
+        trigger: ".page1 video",
         scroller: ".main",
-        start: "top -60%",
-        end: "top -90%",
+        start: "top -10%",
+        end: "top -20%",
         scrub: 3
     }
 })
 let tl3 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page1 h1",
+        trigger: ".page2 h1",
         scroller: ".main",
-        start: "top -140%",
-        end: "top -280%",
+        start: "top 0%",
+        end: "top -50%",
         scrub: 3
     }
 })
 let tl4 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page1 h1",
+        trigger: ".page3 .part2",
         scroller: ".main",
-        start: "top -530%",
-        end: "top -590%",
+        start: "top 20%",
+        end: "top -50%",
         scrub: 3
     }
 })
 let tl5 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page1 h1",
+        trigger: ".page3 .part2",
         scroller: ".main",
-        start: "top -550%",
-        end: "top -560%",
+        start: "top 0%",
+        end: "top -10%",
         scrub: 3
     }
 })
 let tl6 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page1 h1",
+        trigger: ".page4",
         scroller: ".main",
-        start: "top -650%",
-        end: "top -710%",
+        start: "top -50%",
+        end: "top -150%",
         scrub: 3
     }
 })
