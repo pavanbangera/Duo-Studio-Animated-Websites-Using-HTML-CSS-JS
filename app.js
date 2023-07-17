@@ -36,8 +36,7 @@ init();
 
 let cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
+    cursor.style.transform = `translate(${e.pageX}px, ${e.pageY}px) translate(-50%, -50%)`;
 
 })
 
@@ -73,8 +72,26 @@ let tl4 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page1 h1",
         scroller: ".main",
-        start: "top -380%",
-        end: "top -510%",
+        start: "top -530%",
+        end: "top -590%",
+        scrub: 3
+    }
+})
+let tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page1 h1",
+        scroller: ".main",
+        start: "top -550%",
+        end: "top -560%",
+        scrub: 3
+    }
+})
+let tl6 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page1 h1",
+        scroller: ".main",
+        start: "top -650%",
+        end: "top -710%",
         scrub: 3
     }
 })
@@ -99,6 +116,34 @@ tl3.to(".page2 span", ({
     width: "100%"
 }))
 tl4.to(".page3 span", ({
-    width: "100%"
+    width: "100%",
+    backgroundColor: " #EFEFF2"
 }))
 
+tl5.to(".main", ({
+    backgroundColor: "#0f0d0d",
+    color: " #EFEFF2"
+}))
+
+tl6.to(".page4 span", ({
+    width: "90%",
+}))
+
+let boxes = document.querySelectorAll(".page5 .box");
+boxes.forEach((box) => {
+    box.addEventListener("mouseenter", () => {
+        let image = box.getAttribute("data-image");
+        cursor.style.backgroundColor = "#EFEFF2";
+        cursor.style.width = "300px";
+        cursor.style.height = "250px"
+        cursor.style.borderRadius = "0"
+        cursor.style.backgroundImage = `url(${image})`
+    })
+    box.addEventListener("mouseleave", () => {
+        cursor.style.width = "20px";
+        cursor.style.height = "20px"
+        cursor.style.borderRadius = "50%"
+        cursor.style.backgroundImage = `none`
+        cursor.style.backgroundColor = "#DEB2F2";
+    })
+})

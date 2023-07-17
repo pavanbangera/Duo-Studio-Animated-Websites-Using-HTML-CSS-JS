@@ -10,17 +10,18 @@ html,body{
     height: 100%;
     width: 100%;
     font-family: 'Tektur', cursive;
-    cursor: pointer;
+    cursor:default;
     /* background-color: rgb(12, 12, 12); */
 }
 .cursor{
     position: fixed;
     width: 20px;
     height: 20px;
-    background-color: pink;
+    background-color: #DEB2F2;
     border-radius: 50%;
-    mix-blend-mode: difference;
-    z-index: 999;
+    /* mix-blend-mode: difference; */
+    z-index: 0;
+    transition: transform linear 0.1s;
     
 }
 .nav{
@@ -65,14 +66,17 @@ html,body{
 .main{
     background-color: #0f0d0d;
     color: #EFEFF2;
+    z-index: 8;
+    mix-blend-mode: difference;
 }
 
 .page1{
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+   
 }
 .page1>h1{
     font-size: 7vw;
@@ -94,7 +98,7 @@ html,body{
 
 .page2{
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 10vh 5vw;
@@ -154,34 +158,31 @@ html,body{
 }
 .page3 .page3-part1{
     width: 100%;
-    height: 100vh;
+    height: calc((100vw + 100vh) / 2);
     margin-top: 10px;
-    margin-bottom: 10vh;
     position: relative;
 }
 .page3-part1>img{
     width: 40vw;
     height: 35vw;
     position: absolute;
-    bottom: 0;
+    bottom: 10vw;
 }
 .page3-part1>video{
     width: 40vw;
     position: absolute;
-    top: 0;
+    top: 10vw;
     right: 0;
 }
 .page3 .page3-part2{
     width: 100%;
-    height: 100vh;
-    margin-top: 10px;
-    margin-bottom: 10vh;
+    height: calc((100vw + 100vh) / 2.2);
     position: relative;
 }
 .page3-part2>video{
     width: 40vw;
     position: absolute;
-    bottom: 0;
+    bottom: 20vw;
 }
 .page3-part2>img{
     width: 40vw;
@@ -196,6 +197,130 @@ html,body{
     background-color: #0f0d0d;
 }
 .page4{
-    height: 100vh;
-    background-color: #0f0d0d;
+    height: auto;
+    padding: 10vh 5vw;
+    position: relative;
+}
+.page4>h2{
+    width: 14%;
+    margin: 10vh auto;
+    font-size: 13px;
+    text-align: center;
+    
+}
+.page4>.outer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page4>.outer-container>img{
+width: 20vw;
+position: absolute;
+transition: all ease-out 0.5s;
+
+}
+.page4>.outer-container>img:nth-child(1){
+left: 10%;
+transform: translateY(10%) rotate(2deg);
+opacity: 0;
+
+}
+.page4>.outer-container>img:nth-child(3){
+right: 10%;
+transform: translateY(10%) rotate(2deg);
+opacity: 0;
+}
+.page4>.outer-container>.inner-container{
+    height: 10vw;
+    overflow: hidden;
+}
+.page4>.outer-container h1{
+    font-size: 7vw;
+    position: relative;
+    top: 0%;
+    transition: top ease 0.5s;
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+.page4>.outer-container:hover h1{
+    top: -100%;
+    color: #DEB2F2;
+}
+.page4>.outer-container:hover img{
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+.page4>span{
+    width: 0%;
+    height: 5px;
+    background-color: #EFEFF2;
+    position: absolute;
+    bottom: 0;
+}
+.page4 .outer-container:nth-last-child(2){
+    margin-bottom: 20vh;
+}
+
+.page5{
+    height: auto;
+    padding: 10vh 5vw;
+}
+.page5>h1{
+    font-size: 4.5vw;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.page5>h1>span{
+    color: #DEB2F2;
+}
+.page5>.box{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #EFEFF2;
+   
+}
+.page5>.box:nth-last-child(1){
+    border-bottom: 2px solid #EFEFF2;
+}
+.page5 h2{
+    font-size: 1vw;
+}
+.page5>.box>.box-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.page6{
+    height: 90vh;
+    background-color: #edbfff;
+    color: #0f0d0d;
+    padding: 10vh 5vw;
+}
+.page6>h3{
+    font-size: 2vw;
+}
+.page6>.lower{
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.page6>.lower>.contact{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+  
+}
+.page6>.lower>.contact a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 100;
+}
+.page6>.lower h4,h5{
+    font-weight: 100;
 }
